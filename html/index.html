@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio - WilliamDev</title>
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+  <!-- NAV -->
+  <header>
+    <nav>
+      <div class="logo">William<span>Dev</span></div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="menu-toggle">☰</div>
+      <button id="themeToggle" class="toggle-theme">🌞</button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-text">
+      <h2>¡Hola! Soy <span>William</span></h2>
+      <p>
+        Desarrollador web en formación, apasionado por el <b>diseño</b>, 
+        la <b>programación</b> y el <b>machine learning</b>.
+      </p>
+      <a href="#proyectos" class="btn">Ver Proyectos</a>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+
+  <section id="proyectos" class="proyectos">
+  <h2>Mis Proyectos</h2>
+  <div class="proyectos-grid">
+
+    <!-- CARD EJEMPLO -->
+    <div class="card">
+      <div class="card-image">
+        <img src="img/proyecto1.jpg" alt="Proyecto 1">
+        <div class="card-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+        <div class="card-footer">
+          <div class="hosting-logo">
+            <img src="img/github.png" alt="GitHub">
+          </div>
+          <div class="stack-icons">
+            <i class="fas fa-code" data-tooltip="Frontend"></i>
+            <i class="fas fa-database" data-tooltip="Backend"></i>
+          </div>
+        </div>
+      </div>
+      <div class="card-content">
+        <h3>Proyecto 1</h3>
+        <p>Sitio web moderno y responsivo desarrollado como práctica de portafolio.</p>
+      </div>
+    </div>
+
+    <!-- CARD EJEMPLO 2 -->
+    <div class="card">
+      <div class="card-image">
+        <img src="../img/img_1.webp" alt="Proyecto 2">
+        <div class="card-tags">
+          <span>Python</span>
+          <span>Flask</span>
+        </div>
+        <div class="card-footer">
+          <div class="hosting-logo">
+            <img src="../img/github-dark.svg" alt="Vercel">
+          </div>
+          <div class="stack-icons">
+            <i class="fas fa-code" data-tooltip="Frontend"></i>
+            <i class="fas fa-database" data-tooltip="Backend"></i>
+          </div>
+        </div>
+      </div>
+      <div class="card-content">
+        <h3>Proyecto 2</h3>
+        <p>Aplicación web con backend en Flask y despliegue en Vercel.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- HABILIDADES -->
+  <section class="habilidades" id="habilidades">
+    <h2>Habilidades</h2>
+    <ul>
+      <li data-skill="html">HTML</li>
+      <li data-skill="css">CSS</li>
+      <li data-skill="js">JavaScript</li>
+      <li data-skill="python">Python</li>
+      <li data-skill="sql">SQL</li>
+    </ul>
+  </section>
+
+  <!-- MODAL HABILIDADES -->
+  <div class="modal" id="skillModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3 id="skillTitle"></h3>
+      <p id="skillDescription"></p>
+    </div>
+  </div>
+
+  <!-- CONTACTO -->
+  <section class="contacto" id="contacto">
+    <h2>Contáctame</h2>
+    <form>
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu correo" required>
+      <textarea placeholder="Tu mensaje" required></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 WilliamDev. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="../js/index.js"></script>
+</body>
+</html>
