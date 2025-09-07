@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-  <!-- NAV -->
+  <!-- barra navegador -->
   <header>
     <nav>
       <div class="logo">William<span>Dev</span></div>
@@ -22,7 +22,7 @@
     </nav>
   </header>
 
-  <!-- HERO -->
+  <!-- presentacion -->
   <section class="hero" id="inicio">
     <div class="hero-text">
       <h2>¡Hola! Soy <span>William</span></h2>
@@ -30,6 +30,12 @@
         Desarrollador web en formación, apasionado por el <b>diseño</b>, 
         la <b>programación</b> y el <b>machine learning</b>.
       </p>
+      <p>Mi <b>vision</b> y <b>mision</b> como futuro ingeniero en sistemas es encaminarme en el mundo del <b>machine learning</b>,
+        pero no solo enfocado en la generación de texto, sino, que se convierta en una herramienta mas versatil
+        innovandolo como un asistente que sea capaz de generar acciones de la <b>vida cotidiana</b> y que se entrene
+        enfocado en el usuario.
+      </p>
+      <br>
       <a href="#proyectos" class="btn">Ver Proyectos</a>
     </div>
   </section>
@@ -96,10 +102,10 @@
   <!-- CONTACTO -->
   <section class="contacto" id="contacto">
     <h2>Contáctame</h2>
-    <form>
-      <input type="text" placeholder="Tu nombre" required>
-      <input type="email" placeholder="Tu correo" required>
-      <textarea placeholder="Tu mensaje" required></textarea>
+    <form id="contact-form">
+      <input type="text" name="user_name" placeholder="Tu nombre" required>
+      <input type="email" name="user_email" placeholder="Tu correo" required>
+      <textarea name="message" placeholder="Tu mensaje" required></textarea>
       <button type="submit" class="btn">Enviar</button>
     </form>
   </section>
@@ -108,7 +114,10 @@
   <footer>
     <p>© 2025 WilliamDev. Todos los derechos reservados.</p>
   </footer>
-
+  
   <script src="../js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="../js/contactame.js"></script>
+
 </body>
 </html>
