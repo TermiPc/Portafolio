@@ -110,8 +110,9 @@ nav {
 }
 
 .proyectos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   margin-top: 2rem;
 }
@@ -122,6 +123,8 @@ nav {
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 300px;   /* 👈 Cards más pequeñas */
+  flex: 1 1 280px;    /* Responsivas */
 }
 
 .card:hover {
@@ -137,7 +140,7 @@ nav {
 
 .card-image img {
   width: 100%;
-  height: 180px;
+  height: 160px;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
@@ -162,36 +165,36 @@ nav {
   background: rgba(0, 0, 0, 0.35);
 }
 
-/* Tags arriba izquierda */
+/* Tags con iconos */
 .card-tags {
   position: absolute;
   top: 10px;
   left: 10px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
+  gap: 6px;
   z-index: 2;
 }
 
-.card-tags span {
-  background: rgba(255, 255, 255, 0.9);
-  color: #333;
-  padding: 0.3rem 0.6rem;
-  border-radius: 8px;
-  font-size: 0.8rem;
-  font-weight: bold;
+.card-tags img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  background: rgba(255,255,255,0.9);
+  padding: 3px;
+  border-radius: 6px;
 }
 
 /* Footer dentro de la imagen */
 .card-footer {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  right: 10px;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 2;
+  padding: 0 4px;   /* 👈 margen interno extra */
 }
 
 /* Logo de hosting */
@@ -201,26 +204,28 @@ nav {
   object-fit: contain;
 }
 
-/* Iconos stack */
-.card-footer .stack-icons {
+/* Stack icons */
+.stack-icons {
   display: flex;
-  gap: 10px;
-  position: relative;
+  gap: 12px;
 }
 
-.card-footer .stack-icons i {
-  font-size: 1.2rem;
-  color: #fff;
-  background: rgba(0,0,0,0.5);
+.stack-icon {
+  background: rgba(0,0,0,0.6);
   padding: 6px;
   border-radius: 6px;
-  transition: transform 0.3s, background 0.3s;
   cursor: pointer;
   position: relative;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.stack-icon:hover {
+  transform: scale(1.2);
+  background: rgba(0,0,0,0.8);
 }
 
 /* Tooltip */
-.card-footer .stack-icons i::after {
+.stack-icon::after {
   content: attr(data-tooltip);
   position: absolute;
   bottom: 130%;
@@ -237,15 +242,9 @@ nav {
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-.card-footer .stack-icons i:hover::after {
+.stack-icon:hover::after {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
-}
-
-/* Hover íconos */
-.card-footer .stack-icons i:hover {
-  transform: scale(1.2);
-  background: rgba(0,0,0,0.7);
 }
 
 /* Descripción */
@@ -259,6 +258,46 @@ nav {
 .card-content p {
   font-size: 0.9rem;
   color: #555;
+}
+
+.card-tags img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  background: transparent; /* 👈 asegúrate de que no tenga fondo */
+  border-radius: 6px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card-tags img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7));
+}
+
+.card-tags img[alt="HTML"] {
+  filter: drop-shadow(0 0 6px #e34f26); /* Naranja HTML */
+}
+
+.card-tags img[alt="CSS"] {
+  filter: drop-shadow(0 0 6px #264de4); /* Azul CSS */
+}
+
+.card-tags img[alt="JavaScript"] {
+  filter: drop-shadow(0 0 6px #f7df1e); /* Amarillo JS */
+}
+
+.card-footer img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  background: transparent; /* 👈 asegúrate de que no tenga fondo */
+  border-radius: 6px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card-footer img:hover {
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7));
+  cursor: pointer;
 }
 
 /* --- HABILIDADES --- */
@@ -311,7 +350,7 @@ nav {
   margin-bottom: 1rem;
 }
 .modal-content p {
-  color: #555;
+  color: #000000;
 }
 .close {
   position: absolute;
@@ -374,6 +413,10 @@ body.dark .contacto {
 body.dark .modal-content {
   background: #161b22;
   color: #e6edf3;
+}
+
+body.dark .modal-content p {
+  color: #ffffff;
 }
 
 /* --- RESPONSIVE --- */

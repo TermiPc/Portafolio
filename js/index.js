@@ -34,11 +34,11 @@ const skillDescription = document.getElementById("skillDescription");
 const closeModal = document.querySelector(".close");
 
 const skillsInfo = {
-  html: "HTML es el lenguaje estándar para estructurar páginas web.",
-  css: "CSS permite dar estilo y diseño moderno a las páginas web.",
-  js: "JavaScript agrega interactividad y lógica a tus proyectos.",
-  python: "Python es un lenguaje versátil usado en IA, backend y automatización.",
-  sql: "SQL es esencial para manejar y consultar bases de datos."
+  html: "Se el funcionamiento basico y estructuracion de html para el desarrolo de una pagina de gran calidad y optimizada",
+  css: "Tengo conocimiento del uso y accesibilidad de css para diseñar paginas modernas y agradables visualmente",
+  js: "He manejado algunos proyectos con javascript. Aun no se su totalidad pero estoy en el proceso",
+  python: "Se el funcionamiento basico del lenguaje, he creado proyectos basicos con este lenguaje ya que no lo domino en su totalidad, pero estoy empapandome del tema para enfocarme en este lenguaje para el desarrollo de IAs",
+  sql: "He manejado Mysql por Xaamp y apache para crear base de datos en paginas web, de este sigo aprendiendo a usarlo"
 };
 
 document.querySelectorAll(".habilidades li").forEach(li => {
