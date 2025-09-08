@@ -123,7 +123,7 @@ nav {
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
-  max-width: 300px;   /* 👈 Cards más pequeñas */
+  max-width: 400px;   /* Cards más pequeñas */
   flex: 1 1 280px;    /* Responsivas */
 }
 
@@ -194,7 +194,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   z-index: 2;
-  padding: 0 4px;   /* 👈 margen interno extra */
+  padding: 0 0.5rem;   /* margen interno extra */
 }
 
 /* Logo de hosting */
@@ -269,11 +269,6 @@ nav {
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.card-tags img:hover {
-  transform: scale(1.2);
-  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7));
-}
-
 .card-tags img[alt="HTML"] {
   filter: drop-shadow(0 0 6px #e34f26); /* Naranja HTML */
 }
@@ -283,7 +278,7 @@ nav {
 }
 
 .card-tags img[alt="JavaScript"] {
-  filter: drop-shadow(0 0 6px #f7df1e); /* Amarillo JS */
+  filter: drop-shadow(0 0 6px #f7de1ed3); /* Amarillo JS */
 }
 
 .card-footer img {
