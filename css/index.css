@@ -258,6 +258,18 @@ nav {
 .card-content p {
   font-size: 0.9rem;
   color: #555;
+  margin-bottom: 1rem;
+}
+
+.card-content img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card-content img:hover {
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7));
+  cursor: pointer;
 }
 
 .card-tags img {
