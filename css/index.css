@@ -121,15 +121,15 @@ nav {
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 18px rgba(106,0,244,0.08), 0 1.5px 8px rgba(0,195,255,0.08);
   transition: transform 0.3s, box-shadow 0.3s;
   max-width: 400px;   /* Cards más pequeñas */
   flex: 1 1 280px;    /* Responsivas */
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(106,0,244,0.18), 0 3px 16px rgba(0,195,255,0.12);
 }
 
 /* Imagen + Overlay */
@@ -367,6 +367,174 @@ nav {
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+/* --- CERTIFICADOS --- */
+.certificados {
+  background: linear-gradient(135deg, #f4f4f9 60%, #e0e7ff 100%);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.certificados h2 {
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+  
+}
+
+.certificados-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.certificado-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(106,0,244,0.08), 0 1.5px 8px rgba(0,195,255,0.08);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.certificado-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(106,0,244,0.18), 0 3px 16px rgba(0,195,255,0.12);
+}
+
+.certificado-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 12px rgba(0,195,255,0.10);
+  background: #f4f4f9;
+  transition: transform 0.3s;
+}
+
+.certificado-card:hover img {
+  transform: scale(1.08) rotate(-2deg);
+}
+
+.certificado-card .certificado-fcc{
+  background-color: #0a0a23;
+}
+
+body.dark .certificado-card .certificado-fcc{
+  background-color: #0a0a23;
+}
+
+.certificado-card .certificado-sn{
+  background-color: #f0f0f0;
+}
+
+body.dark .certificado-card .certificado-sn {
+  background-color: #ffffff;
+}
+
+.certificado-card h3 {
+  color: #000000;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.certificado-card p {
+  color: #555;
+  font-size: 0.98rem;
+  margin-bottom: 1.2rem;
+  min-height: 48px;
+}
+
+.certificado-card .btn {
+  margin-top: auto;
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #00c3ff, #6a00f4);
+  color: #fff;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,195,255,0.08);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.certificado-card .btn-process {
+  margin-top: auto;
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ff0000, #f45900);
+  color: #fff;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,195,255,0.08);
+  transition: background 0.3s, transform 0.3s;
+  cursor: not-allowed;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Dark mode certificados */
+body.dark .certificados {
+  background: linear-gradient(135deg, #0d1117 60%, #161b22 100%);
+}
+body.dark .certificado-card {
+  background: #161b22;
+  color: #e6edf3;
+  box-shadow: 0 4px 18px rgba(0,195,255,0.10), 0 1.5px 8px rgba(106,0,244,0.10);
+}
+body.dark .certificado-card h3 {
+  color: #ffffff;
+}
+body.dark .certificado-card p {
+  color: #b3b3b3;
+}
+body.dark .certificado-card img {
+  background: #0d1117;
+  box-shadow: 0 2px 12px rgba(106,0,244,0.10);
+}
+body.dark .certificado-card .btn {
+  background: linear-gradient(135deg, #00c3ff, #6a00f4);
+  color: #fff;
+}
+body.dark .certificado-card .btn:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive certificados */
+@media (max-width: 900px) {
+  .certificados-grid {
+    gap: 20px;
+  }
+  .certificado-card {
+    max-width: 90vw;
+  }
+}
+@media (max-width: 600px) {
+  .certificados-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .certificado-card {
+    width: 100%;
+    max-width: 350px;
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+}
+
 
 /* --- CONTACTO --- */
 .contacto {
